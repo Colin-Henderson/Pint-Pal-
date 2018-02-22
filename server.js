@@ -2,21 +2,22 @@ require('dotenv').config();
 
 // Need to put this in whatever file we 
 // are connection to our database in 
-const db = require('db')
-  db.connect({
-  host: process.env.DB_HOST,
-  username: process.env.DB_USER,
-  password: process.env.DB_PASS
-})
+// const db = require('db')
+//   db.connect({
+//   host: process.env.DB_HOST,
+//   username: process.env.DB_USER,
+//   password: process.env.DB_PASS
+// })
 
 /*         John's addition                   */
 const express = require('express');
 const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
-const router = require('./controllers/beers_controller.js');
+const router = require('./controller/beers_controller.js');
 const exphbs = require('express-handlebars');
 
 const app = express();
+require("./routing/htmlRoutes.js")(app);
 const port = process.env.PORT || 3000;
 
 // Manages app's static content from the "public" directory within application directory.
