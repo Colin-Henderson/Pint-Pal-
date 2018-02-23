@@ -13,7 +13,7 @@ const db = require('db')
 const express = require('express');
 const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
-const router = require('./controllers/beers_controller.js');
+const router = require('./controller/beer_controller.js');
 const exphbs = require('express-handlebars');
 
 const app = express();
