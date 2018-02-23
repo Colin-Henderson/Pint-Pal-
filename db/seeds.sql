@@ -1,40 +1,39 @@
 INSERT INTO beerlog (brand_name, beer_name, state_abbrev, beer_style, abv, rating) 
 VALUES ('Hardywood', 'Gingerbread Stout', 'VA', 'Imperial Milk', 9.2, 4.5),
     ('Guinness', 'Guinness Draught', 'Ireland', 'Irish Dry Stout', 4.2, 5.0),
-    ('Breckenridge', '72 Imperial Chocolate Cream', 'Milk/Sweet', 7.2, 4.5);
-    ('Stella Artois', 'Stella Artois Lager', 'Belgium', 'Lager', 5.0, 4.0);
-    ('Anheuser-Busch', 'Bud Light Lime', 'MO', 'Lager', 4.2, 2.9);
-    ('Bulmers Cider', 'Strongbow Cider', 'GB', 'Cider', 5.0, 3.6);
-    ('Left Hand Brewing Company', 'Milk Stout Nitro', 'CO', 'Stout Milk/Sweet', 6.0, 3.8);
-    ('Hardywood', 'Trickery', 'VA', 'Imperial Milk/Sweet Stout', 13.5, 4.0);
-    ('Heineken', 'Heineken', 'Holland', 'Lager', 5.0, 3.8);
-    ('Blue Bee Cider', 'Orchard Potluck: Winesap Trappist', 'VA', 'Cider', 8.0, 4.0);
-    ('Blue Bee Cider', 'Compleat Cyder', 'VA', 'Cider', 8.5, 3.6);
-    ('Anheuser-Busch', 'Bud Light', 'MO', 'Light Lager', 4.20, 1.86);
-    ('Ballast Point', 'Dorado', 'CA', 'IPA', 10.00, 4.12);
-    ('Green Flash', 'West Coast IPA', 'CA', 'IPA', 8.10, 4.22);
-    ('Lagunitas', 'Hop Stoopid', 'CA', 'IPA', 8.0, 4.19);
-    ('Mother Earth', 'Weeping Willow Wit', 'NC', 'Witbier', 5.0, 3.69);
-    ('Anheuser-Busch', 'Shock Top', 'MO', 'Witbier', 5.20, 2.95);
-    ('The Veil', 'Crucial Taunt', 'VA', 'IPA', 8.00, 4.38);
-    ('Bells', 'Oarsman Ale', 'MI', 'Weissbier', 4.00, 3.53);
-    ('Hardywood', 'Richmond Lager', 'VA', 'Light Lager', 5.00, 4.18);
-    ('Anheuser-Busch', 'Natural Light', 'MO', 'Light Lager', 4.20, 1.69);
-    ('Triple Crossing', 'Falcon Smash', 'VA', 'IPA', 7.40, 3.97);
-    ('Hardywood', 'Gingerbread Stout', 'VA', 'Imperial Milk', 9.2, 4.5);
-    ('Guinness', 'Guinness Draught', 'Ireland', 'Irish Dry Stout', 4.2, 5.0);
-    ('Breckenridge', '72 Imperial Chocolate Cream', 'Milk/Sweet', 7.2, 4.5);
-    ('Stella Artois', 'Stella Artois Lager', 'Belgium', 'Lager', 5.0, 4.0);
-    ('Anheuser-Busch', 'Bud Light Lime', 'MO', 'Lager', 4.2, 2.9);
-    ('Bulmers Cider', 'Strongbow Cider', 'GB', 'Cider', 5.0, 3.6);
-    ('Left Hand Brewing Company', 'Milk Stout Nitro', 'CO', 'Stout Milk/Sweet', 6.0, 3.8);
-    ('Hardywood', 'Trickery', 'VA', 'Imperial Milk/Sweet Stout', 13.5, 4.0);
-    ('Heineken', 'Heineken', 'Holland', 'Lager', 5.0, 3.8);
-    ('Blue Bee Cider', 'Orchard Potluck: Winesap Trappist', 'VA', 'Cider', 8.0, 4.0);
-    ('Blue Bee Cider', 'Compleat Cyder', 'VA', 'Cider', 8.5, 3.6);
-    ('Triple Crossing', 'Falcon Smash', 'VA', 'IPA', 7.05, 5);
-    ('Triple Crossing', 'Black Dolphin', 'VA', 'Russian Imperial Stout', 10., 4.12);
-    ('Veil', 'Hornswoggler With Oreos', 'VA', 'Milk/Sweet Stout', 7., 4.26);
-    ('Veil', "If You're Drinking This It's Too Late", 'VA', 'Imperial IPA', 9., 4.25);
-    ('Sierra Nevada', 'Ruthless Rye', 'CA', 'IPA', 6.6, 3.89);
-    ('Oskar Blues', "Dale's Pale Ale", 'CO', 'American Pale Ale', 6.5, 3.88);
+    ('Breckenridge', '72 Imperial Chocolate Cream','CO', 'Milk/Sweet', 7.2, 4.5),
+    ('Stella Artois', 'Stella Artois Lager', 'Belgium', 'Lager', 5.0, 4.0),
+    ('Anheuser-Busch', 'Bud Light Lime', 'MO', 'Lager', 4.2, 2.9),
+    ('Bulmers Cider', 'Strongbow Cider', 'GB', 'Cider', 5.0, 3.6),
+    ('Left Hand Brewing Company', 'Milk Stout Nitro', 'CO', 'Stout Milk/Sweet', 6.0, 3.8),
+    ('Hardywood', 'Trickery', 'VA', 'Imperial Milk/Sweet Stout', 13.5, 4.0),
+    ('Heineken', 'Heineken', 'Holland', 'Lager', 5.0, 3.8),
+    ('Blue Bee Cider', 'Orchard Potluck: Winesap Trappist', 'VA', 'Cider', 8.0, 4.0),
+    ('Blue Bee Cider', 'Compleat Cyder', 'VA', 'Cider', 8.5, 3.6),
+    ('Anheuser-Busch', 'Bud Light', 'MO', 'Light Lager', 4.20, 1.86),
+    ('Ballast Point', 'Dorado', 'CA', 'IPA', 10.00, 4.12),
+    ('Green Flash', 'West Coast IPA', 'CA', 'IPA', 8.10, 4.22),
+    ('Lagunitas', 'Hop Stoopid', 'CA', 'IPA', 8.0, 4.19),
+    ('Mother Earth', 'Weeping Willow Wit', 'NC', 'Witbier', 5.0, 3.69),
+    ('Anheuser-Busch', 'Shock Top', 'MO', 'Witbier', 5.20, 2.95),
+    ('The Veil', 'Crucial Taunt', 'VA', 'IPA', 8.00, 4.38),
+    ('Bells', 'Oarsman Ale', 'MI', 'Weissbier', 4.00, 3.53),
+    ('Hardywood', 'Richmond Lager', 'VA', 'Light Lager', 5.00, 4.18),
+    ('Anheuser-Busch', 'Natural Light', 'MO', 'Light Lager', 4.20, 1.69),
+    ('Triple Crossing', 'Falcon Smash', 'VA', 'IPA', 7.40, 3.97),
+    ('Hardywood', 'Gingerbread Stout', 'VA', 'Imperial Milk', 9.2, 4.5),
+    ('Guinness', 'Guinness Draught', 'Ireland', 'Irish Dry Stout', 4.2, 5.0),
+    ('Stella Artois', 'Stella Artois Lager', 'Belgium', 'Lager', 5.0, 4.0),
+    ('Anheuser-Busch', 'Bud Light Lime', 'MO', 'Lager', 4.2, 2.9),
+    ('Bulmers Cider', 'Strongbow Cider', 'GB', 'Cider', 5.0, 3.6),
+    ('Left Hand Brewing Company', 'Milk Stout Nitro', 'CO', 'Stout Milk/Sweet', 6.0, 3.8),
+    ('Hardywood', 'Trickery', 'VA', 'Imperial Milk/Sweet Stout', 13.5, 4.0),
+    ('Heineken', 'Heineken', 'Holland', 'Lager', 5.0, 3.8),
+    ('Blue Bee Cider', 'Orchard Potluck: Winesap Trappist', 'VA', 'Cider', 8.0, 4.0),
+    ('Blue Bee Cider', 'Compleat Cyder', 'VA', 'Cider', 8.5, 3.6),
+    ('Triple Crossing', 'Falcon Smash', 'VA', 'IPA', 7.05, 5),
+    ('Triple Crossing', 'Black Dolphin', 'VA', 'Russian Imperial Stout', 10, 4.12),
+    ('Veil', 'Hornswoggler With Oreos', 'VA', 'Milk/Sweet Stout', 7, 4.26),
+    ('Veil', "If You're Drinking This Its Too Late", 'VA', 'Imperial IPA', 9, 4.25),
+    ('Sierra Nevada', 'Ruthless Rye', 'CA', 'IPA', 6.6, 3.89),
+    ('Oskar Blues', "Dale's Pale Ale", 'CO', 'American Pale Ale', 6.5, 3.88)
