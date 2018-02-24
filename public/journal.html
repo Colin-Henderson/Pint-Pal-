@@ -42,10 +42,7 @@
                         </div>
                     </div><!-- close card -->
                     <br>
-        <br>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
+                    
 
 <form>
   <div class="form-group">
@@ -98,14 +95,63 @@
 <script src="https://code.jquery.com/jquery.js"></script>
 
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
+box for large text input
+box for large text input
+<script>
 
+    $("#beerName").val(""),  // text input
+            $("#breweryName").val(""),  // text input
+            $("#beerStyle").val("");  // text input
+        $("#abv").val(""); // int input
+        $("#location").val(""); // text input
+        $("#score").val(""); // dropdown int input
+        $("#notes").val(""); // text box for large text input
+</script>
 
 
     </body>
+    <script>
+
+        $("#submit-button").on("click", function (event) {
+                event.preventDefault();
+
+                var journalEntry = {
+                    beerName: $("#beerName").val(),
+                    breweryName: $("#breweryName").val(),
+                    beerStyle: $("#beerStyle").val(),
+                    abv: $("#abv").val(),
+                    location: $("#location").val(),
+                    score: $("#score").val(),
+                    notes: $("#notes").val()
+                };
+
+
+                $.post("/api/journal.js", journalEntry, function (data) {
+
+
+                    //Use this for suggesting beer
+                    // $("#match-name").text(data[1].name);
+                    // $("#match-img").attr("src", data[1].photo);
+                    // // Show the modal with the best match
+                    // $("#results-modal").modal("toggle");
+                    // console.log(data[1].name + " data[1]")
+
+
+                    $("#beerName").val(""),  // text input
+                        $("#breweryName").val(""),  // text input
+                        $("#beerStyle").val("");  // text input
+                    $("#abv").val(""); // int input
+                    $("#location").val(""); // text input
+                    $("#score").val(""); // dropdown int input
+                    $("#notes").val(""); // text box for large text input
+
+                });
+            });
+
+        
+
+    </script>
 </html>
-
-
-
 
 
 
