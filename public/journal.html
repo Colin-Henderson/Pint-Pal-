@@ -4,7 +4,7 @@
         <meta charset="utf-8">
 
       <!-- browser tab title -->
-      <title>Pint Pal</title>
+      <title>Pint Pal App</title>
 
       <!-- viewport etc -->
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,12 +31,7 @@
     </head>
     <!-- •••••••••••••••••••••••••••••••••••••••••••••• -->
     <body>
-        <br>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-
-                    <div class="card text-white bg-primary mb-3" style="max-width: 100%;">
+                          <div class="card text-white bg-primary mb-3" style="max-width: 100%;">
                         <h1 class="text-center"><!-- <i class="fa fa-female"> --></i>Pint Pal<!-- <i class="fa fa-male"></i> --></h1>
                         <hr>
                         <h3 class="text-center">This is the Survey Page</h3>
@@ -47,78 +42,49 @@
                         </div>
                     </div><!-- close card -->
                     <br>
-                    <div class="card text-white bg-primary mb-3" style="max-width: 100%;">
-                      <form role="form">
-                        <hr>
-                        <h3>This is Survey Question 01</h3>
-                        <select data-placeholder="" class="chosen-select" id="q9">
-                            <option value=""></option>
-                            <option selected="selected" value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
-                        <hr>
-                        <h3>This is Survey Question 02</h3>
-                        <select data-placeholder="" class="chosen-select" id="q9">
-                            <option value=""></option>
-                            <option selected="selected" value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
-                        <hr>
-                        <h3>This is Survey Question 03</h3>
-                        <select data-placeholder="" class="chosen-select" id="q9">
-                            <option value=""></option>
-                            <option selected="selected" value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
-                        <hr>
-                        <h3>This is Survey Question 04</h3>
-                        <select data-placeholder="" class="chosen-select" id="q9">
-                            <option value=""></option>
-                            <option selected="selected" value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
-                        <hr>
-                        <h3>This is Survey Question 05</h3>
-                        <select data-placeholder="" class="chosen-select" id="q9">
-                            <option value=""></option>
-                            <option selected="selected" value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
-                        <hr>
-                        <h3>This is Survey Question 06</h3>
-                        <select data-placeholder="" class="chosen-select" id="q9">
-                            <option value=""></option>
-                            <option selected="selected" value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Strongly Agree)</option>
-                        </select>
-                        <hr>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
 
-<!-- https://www.w3schools.com/bootstrap/bootstrap_forms_inputs.asp -->
-  <h3>Comments</h3>
-  <form>
-    <div class="form-group">
-      <textarea class="form-control" rows="5" id="comment"></textarea>
-    </div>
-  </form>
+<form>
+  <div class="form-group">
+    <label for="beerName">Beer Name</label>
+    <input type="text" class="form-control" id="#beerName" placeholder="Beer Name">
+  </div>
+  <div class="form-group">
+    <label for="breweryName">Brewery Name</label>
+    <input type="text" class="form-control" id="#berweryName" placeholder="Brewery Name">
+  </div>
+  <div class="form-group">
+    <label for="beerStyle">Beer Style</label>
+    <input type="text" class="form-control" id="#beerStyle" placeholder="Beer Style">
+  </div>
+  <div class="form-group">
+    <label for="abv">ABV</label>
+    <input type="text" class="form-control" id="#abv" placeholder="ABV">
+  </div>
+  <div class="form-group">
+    <label for="location">State</label>
+    <input type="text" class="form-control" id="#location" placeholder="State">
+  </div>
+  <hr>
+                        <h3>Rate this beer 1 to 5</h3>
+                        <select data-placeholder="" class="chosen-select" id="#score">
+                            <option value=""></option>
+                            <option selected="selected" value="1">1 (Bad)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Great)</option>
+                        </select>
+  <div class="form-group">
+    <label for="notes">Notes</label>
+    <input type="text" class="form-control" id="#notes" placeholder="Notes">
+  </div>
 
+
+                    
                         <hr>
                         <div class="text-center">
                         <a href="index.html"><button id="submitSurveyBttn" type="button" class="btn btn-lg">Submit</button></a>
