@@ -27,27 +27,46 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
       <!-- LINK TO MY EXTERNAL CSS FILE -->
-      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/pint.css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Ultra" rel="stylesheet">
+
+
     </head>
     <!-- •••••••••••••••••••••••••••••••••••••••••••••• -->
-    <body>
-                          <div class="card text-white bg-primary mb-3" style="max-width: 100%;">
+    <body class="bg-dark">
+          <nav class="navbar navbar-expand-lg main-navbar col-md-12">
+            <!-- //<div class="container-fluid"> -->
+            
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="mr-auto"></div>
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link smooth-link" href="#hero">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link smooth-link" href="#features">Stisla's Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link smooth-link" href="#blog">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link smooth-link" href="#project">Project</a>
+                  </li>
+                </ul>
+              </div>
+            
+          </nav>
+                          <div class="card text-white bg-secondary mb-3" style="max-width: 100%;">
                         <h1 class="text-center"><!-- <i class="fa fa-female"> --></i>Pint Pal<!-- <i class="fa fa-male"></i> --></h1>
                         <hr>
-                        <h3 class="text-center">This is the Survey Page</h3>
-                        <h3 class="text-center"> Etiam sit amet orci eget eros.</h3>
-                        <br>
-                        <div class="text-center">
-                        <a href="index.html"><button type="button" class="btn btn-lg">Home</button></a>
-                        </div>
+                        <h3 class="text-center">Beer Journal</h3>
+                       
+                        
                     </div><!-- close card -->
                     <br>
-        <br>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-
-<form>
+                    
+<div class="row col-md-1"></div>
+<form class="col-md-10 bg-dark">
   <div class="form-group">
     <label for="beerName">Beer Name</label>
     <input type="text" class="form-control" id="#beerName" placeholder="Beer Name">
@@ -69,53 +88,82 @@
     <input type="text" class="form-control" id="#location" placeholder="State">
   </div>
   <hr>
-                        <h3>Rate this beer 1 to 5</h3>
-                        <select data-placeholder="" class="chosen-select" id="#score">
-                            <option value=""></option>
-                            <option selected="selected" value="1">1 (Bad)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5 (Great)</option>
-                        </select>
-  <div class="form-group">
-    <label for="notes">Notes</label>
-    <input type="text" class="form-control" id="#notes" placeholder="Notes">
+  <h3>Rate this beer 1 to 5</h3>
+    <select data-placeholder="" class="chosen-select" id="#score">
+      <option value=""></option>
+      <option selected="selected" value="1">1 (Bad)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Great)</option>
+    </select>
+    <div class="form-group">
+  <label for="notes">Notes</label>
+  <input type="text" class="form-control" id="#notes" placeholder="Notes">
   </div>
 
 
                     
                         <hr>
-                        <div class="text-center">
-                        <a href="index.html"><button id="submitSurveyBttn" type="button" class="btn btn-lg">Submit</button></a>
+                        <div class="col-md-12 text-center">
+                        <a href="index.html"><button id="submit-button" type="button" class="btn btn-lg">Submit</button></a>
                       </div>
                       </form>
                     </div><!-- close card -->
                 </div><!-- close col-lg-12 -->
             </div><!-- close row -->
         </div><!-- close container -->
-
+<div class="col-md-12 text-center">
+  <a href="index.html">
+    <button type="button" class="btn btn-lg">Home</button>
+  </a>
+</div>
 <script src="https://code.jquery.com/jquery.js"></script>
 
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
 
 
+   
+    <script>
 
+        $("#submit-button").on("click", function (event) {
+                event.preventDefault();
+
+                var journalEntry = {
+                    beerName: $("#beerName").val(),
+                    breweryName: $("#breweryName").val(),
+                    beerStyle: $("#beerStyle").val(),
+                    abv: $("#abv").val(),
+                    location: $("#location").val(),
+                    score: $("#score").val(),
+                    notes: $("#notes").val()
+                };
+
+
+                $.post("/api/journal.js", journalEntry, function (data) {
+
+
+                    //Use this for suggesting beer
+                    // $("#match-name").text(data[1].name);
+                    // $("#match-img").attr("src", data[1].photo);
+                    // // Show the modal with the best match
+                    // $("#results-modal").modal("toggle");
+                    // console.log(data[1].name + " data[1]")
+
+
+                    $("#beerName").val(""),  // text input
+                        $("#breweryName").val(""),  // text input
+                        $("#beerStyle").val("");  // text input
+                    $("#abv").val(""); // int input
+                    $("#location").val(""); // text input
+                    $("#score").val(""); // dropdown int input
+                    $("#notes").val(""); // text box for large text input
+
+                });
+            });
+
+        
+
+    </script>
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
