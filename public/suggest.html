@@ -23,13 +23,13 @@
                 <nav id="nav-main" class="nav-main header__menu data-nav-main">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#Journal">Journal</a>
+                            <a class="nav-link" href="journal.html">Journal</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#trysomethingnew">Try something new</a>
+                            <a class="nav-link" href="suggest.html">Try something new</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#Uber">Uber</a>
+                            <a class="nav-link" href="https://www.uber.com/">Uber</a>
                         </li>
                     </ul>
                 </nav>
@@ -44,6 +44,19 @@
                 <h3 class="text-center">Suggestion</h3>
             </div>
             <div class="col-md-12 row" id="suggestion">
+                <ul>
+                    {{#each beers}} // beer table
+                    <li>
+                        <p>beerName: {{this.beerName}}</p>
+                        <p>breweryName: {{this.breweryName}}</p>
+                        <p>beerStyle: {{this.beerStyle}}</p>
+                        <p>abv: {{this.abv}}</p>
+                        <p>location: {{this.location}}</p>
+                        <p>notes: {{this.notes}}</p>
+                        <p>score: {{this.score}}</p>
+                    </li>
+                    {{/each}}
+                </ul>
             </div>
         </div>
         <div class="card text-white bg-secondary mb-3" style="max-width: 100%;">
