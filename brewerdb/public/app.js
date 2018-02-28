@@ -17,7 +17,7 @@ $(function() {
 		    method: "GET"
 	  	}).done(function(beerData) {
 	  		console.log(beerData)
-	  		$("#brewery").html(beerData)
+	  		// $("#brewery").html(beerData)
 	  		// Look back at omdb HW data and use a for loop to get through the array and then do something with it 
 	  		// console.log("")
 	  })
