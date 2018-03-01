@@ -18,7 +18,7 @@ var orm = {
   selectAll: function(callback) {
 
     // Run MySQL Query
-    connection.query('SELECT * FROM beers', function (err, result) {
+    connection.query('SELECT * FROM beerlog', function (err, result) {
       if (err) throw err;
       callback(result);
     });
@@ -65,9 +65,13 @@ var orm = {
     // ----------------------------------------------------------
 
     // Run MySQL Query
-    connection.query('INSERT INTO beers SET ?', {
-      beer_name: beer_name,
-      drunk: false,
+    connection.query('INSERT INTO beerlog SET ?', {
+      beer_Name: beer_Name,
+      brand_Name: brand_Name,
+      state_Abbrev: state_Abbrev,
+      beer_Style: beer_Style,
+      abv: abv,
+      rating: rating,
       date: timestamp
     }, function (err, result) {
       if (err) throw err;
@@ -79,8 +83,8 @@ var orm = {
   // updateOne()
   updateOne: function(beerID, callback){
 
-    // Run MySQL Query
-    connection.query('UPDATE beers SET ? WHERE ?', [{drunk: true}, {id: beerID}], function (err, result) {
+    // Run MySQL Query  (think devoured = requesting a suggestion)
+    connection.query('UPDATE beerlog SET ? WHERE ?', [{suggestion: true}, {id: beerID}], function (err, result) {
         if (err) throw err;
         callback(result);
       });

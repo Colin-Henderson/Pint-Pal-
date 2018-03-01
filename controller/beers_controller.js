@@ -1,7 +1,7 @@
 // Node Dependencies
 const express = require('express');
 const router = express.Router();
-// const beer = require('../models/beer.js');
+const beer = require('../models/beer.js');
 
 // Index Redirect
 router.get('/', function (req, res) {

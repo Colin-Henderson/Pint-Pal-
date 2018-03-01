@@ -1,0 +1,66 @@
+<!-- journal.handlebars = main.handlebars-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pint Pal</title>
+          <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> 
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Ultra" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/pint.css">
+
+</head>
+
+  <body>  
+    <div class="container">
+      
+      <br><br><br><br>
+
+      <center>
+        <h1 class="title_font">Pint Pal! </h1>
+      </center>
+      
+      <br>   
+      <!-- Make note, beer input is from index.handlebars -->
+      {{{body}}}
+
+      <br><br><br><br>
+
+      <!-- Beer entry -->
+      <form action="beer/entry" method="POST"> 
+        <div class="row">
+          <div class="col-md-3"></div> 
+          <div class="form-group col-md-6">
+            <center><label for="new_beer" class="blue_font">Your Journal Entry!</label></center>
+            <textarea class="form-control" columns="8" rows="4" id="new_beer" name="beer_name"></textarea>
+          </div>
+
+          <div class="col-md-3"></div> 
+        </div>
+      
+        <center>
+          <button id="submit-button" type="submit" class="btn btn-danger">Submit Entry</button>
+        </center>
+
+      </form>
+      <br>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  </body>
+</html> 
+
+<!--
+        <p>beerName: {{this.beerName}}</p>
+        <p>breweryName: {{this.breweryName}}</p>
+        <p>beerStyle: {{this.beerStyle}}</p>
+        <p>abv: {{this.abv}}</p>
+        <p>location: {{this.location}}</p>
+        <p>notes: {{this.notes}}</p>
+        <p>score: {{this.score}}</p>  -->

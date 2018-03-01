@@ -7,6 +7,7 @@
       <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
       <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
       <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
@@ -15,24 +16,25 @@
 
 </head>
   <body>
-    <div class="wrapper">
-      <div class="row col-md-12">
-        <div>
-          <nav id="nav-main" class="nav-main header__menu data-nav-main">
-            <ul class="nav">
-              <li class="nav-item"><a class="nav-link" href="journal.html">Journal</a></li>
-              <li class="nav-item"><a class="nav-link" href="suggest.html">Try something new</a></li>
-              <li class="nav-item"><a class="nav-link" href="https://www.uber.com/">Uber</a></li>
-            </ul>
-          </nav>
+      <div class="row col-md-8">
+          <div>
+            <nav id="nav-main" class="nav-main header__menu data-nav-main">
+              <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="journal.html">Journal</a></li>
+                <li class="nav-item"><a class="nav-link" href="suggest.html">Try something new</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.uber.com/">Uber</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
+    <div id="polina">
+
       <div class="row">
         <div>
           <h1>Pint Pal</h1>
         </div>        
         <div class="hero">
-          <img class="beerArt" src="assets/images/tap.jpg" />
+          <!--<img class="beerArt" src="assets/images/tap.jpg" /> -->
           <h3 class="text-center">Beer Journal</h3>
         </div>
       </div>
@@ -44,16 +46,16 @@
           <form class="col-md-10 bg-dark" id="form">
             
             <div class="form-group">
-              <label for="beerName">Beer Name</label>
-              <input type="text" class="form-control" id="beerName" placeholder="Beer Name">
+              <label for="beer_Name">Beer Name</label>
+              <input type="text" class="form-control" id="beer_Name" placeholder="Beer Name">
             </div>
             <div class="form-group">
-              <label for="breweryName">Brewery Name</label>
-              <input type="text" class="form-control" id="breweryName" placeholder="Brewery Name">
+              <label for="brewery_Name">Brewery Name</label>
+              <input type="text" class="form-control" id="brewery_Name" placeholder="Brewery Name">
             </div>
             <div class="form-group">
-              <label for="beerStyle">Beer Style</label>
-              <input type="text" class="form-control" id="beerStyle" placeholder="Beer Style">
+              <label for="beer_Style">Beer Style</label>
+              <input type="text" class="form-control" id="beer_Style" placeholder="Beer Style">
             </div>
             <div class="form-group">
               <label for="abv">ABV</label>
@@ -61,7 +63,7 @@
             </div>
             <div class="form-group">
               <label for="location">State</label>
-              <input type="text" class="form-control" id="location" placeholder="State">
+              <input type="text" class="form-control" id="state_Abbrev" placeholder="State">
             </div>
             
             
@@ -142,13 +144,21 @@
 
         
 
-
-
-
-
-        
-
     </script>
+
+      <!-- Adds background video -->
+  <video poster="gt_VideoTrim.mp4" id="bgvid" playsinline autoplay muted>
+  <source src="assets/images/trim_Journal.mp4" type="video/webm">
     
+<script>
+  var vid = document.getElementById('bgvid');
+  function getPlaySpeed() {
+    alert(vid.playbackRate);
+  }
+  function setPlaySpeed() {
+    vid.playbackRate = 5.5;
+
+  }
+</script>
 
 </html>
