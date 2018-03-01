@@ -3,6 +3,6 @@ var path = require("path");
 module.exports = function(app){
 	app.get("/", function(req, res) {
 		var index = path.resolve(__dirname,  '../public/home.html');
-      	res.sendFile(index);
+      	res.render(index);
 	});
 };

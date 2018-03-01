@@ -1,35 +1,58 @@
 // Node Dependencies
 const express = require('express');
+const beer = require('../models/beers.js');
 const router = express.Router();
-// const beer = require('../models/beer.js');
+ 
+
+var path = require("path");
+
+
 
 // Index Redirect
 router.get('/', function (req, res) {
-  res.redirect('/index');
+  //console.log("hi")
+  beer.selectAll(function(data) {
+    //console.log(data)
+    console.log("beer data")
+    
+    //res.send(index);
+  });
+  var index = path.resolve(__dirname, '../public/home.html');
+  res.sendFile(index);
 });
 
 // Index Page (render all beers to DOM)
-router.get('/index', function (req, res) {
-  beer.selectAll(function(data) {
-    var hbsObject = { beers: data };
-    //console.log(hbsObject);
-    res.render('index', hbsObject);
-  });
-});
+// router.get('/index', function (req, res) {
+//   beer.selectAll(function(data) {
+//     var hbsObject = { beers: data };
+//     //console.log(hbsObject);
+//     res.render('index', hbsObject);
+//   });
+// });
 
 // Create a New Beer
-router.post('/beer/create', function (req, res) {
-  beer.insertOne(req.body.beer_name, function() {
-    res.redirect('/index');
+router.post('/api/beers', function (req, res) {
+  console.log(req.body)
+  console.log("hello")
+  beer.insertOne([ 
+    "beerName", "breweryName", "beerStyle", "abv", "location", "score", "notes" ], [
+      req.body.beerName, req.body.breweryName, req.body.beerStyle, req.body.abv, req.body.location, req.body.score, req.body.notes
+    ], function(result) {
+    res.json('/index');
+    
   });
 });
 
-// Drink a Beer
-router.post('/beer/drink/:id', function (req, res) {
-  beer.updateOne(req.params.id, function() {
-    res.redirect('/index');
-  });
-});
+
+// app.post('/api/beer', (req, res) => {
+//   console.log(req.body)
+// // Drink a Beer
+// router.post('/beer/drink/:id', function (req, res) {
+//   beer.updateOne(req.params.id, function() {
+//     res.redirect('/index');
+//   });
+// });
+
 
 // Export routes
 module.exports = router;

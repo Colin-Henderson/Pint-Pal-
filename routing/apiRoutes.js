@@ -1,20 +1,21 @@
 console.log('API is connected!');  // executing connection check
 
-/*
 
-const beersArray = require('../data/beers.js');
+
+//const beersArray = require('../data/beer.js');
 
 // Get & Post route methods
 function apiRoutes(app) {
 
     // GET route with the url /api/beers. Manages and shows a JSON list of possible beers.
-    app.get('/api/beers', (req, res) => {
+    app.get('/api/beer', (req, res) => {
         res.json(beersArray);
     });
 
     // POST routes /api/beers. Manages incoming answers & handles the suggestion logic as well.
-    app.post('/api/beers', (req, res) => {
-
+    app.post('/api/beer', (req, res) => {
+console.log(req.body)
+console.log("hello")
         const suggestedBeer = {         // Parse beer entry to get integers for AJAX post converts numbers into strings
             name: req.body.name,
             photo: req.body.photo,
@@ -58,4 +59,3 @@ function apiRoutes(app) {
 
 module.exports = apiRoutes;    // Exports to server.js
 
-*/
