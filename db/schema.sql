@@ -1,4 +1,4 @@
--- state , style , abv , name ,  etc.
+3-- state , style , abv , name ,  etc.
 CREATE DATABASE pintpal_db;
 
 USE pintpal_db;
