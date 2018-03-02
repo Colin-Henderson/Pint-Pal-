@@ -1,3 +1,50 @@
+
+<div class="row">
+  <center>
+
+    <div class="col-md-6">
+      <h4 class="blue_font">Journal Table!</h4>
+      <div id="ready_to_eat">
+
+        {{#each burgers}}
+          {{#unless devoured}}
+          <form action="burger/eat/{{id}}" method="POST">
+            <div class="input-group">
+              <li class="form-control">{{id}}. {{burger_name}}</li>
+                <span class="input-group-btn">
+                  <button class="btn btn-success button" type="submit">Details!</button>
+                </span>
+            </div>
+          </form>
+          {{/unless}}
+        {{/each}}
+
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <h4 class="blue_font">Already Consumed</h4>
+      <div id="already_eaten">
+
+        {{#each burgers}}
+          {{#if this.devoured}}
+            <div class="input-group">
+              <li class="form-control">{{this.id}}. {{this.burger_name}}</li>
+              <span class="input-group-btn">
+                <button class="btn btn-info button" type="button">Consumed</button>
+              </span>
+            </div>
+          {{/if}}
+        {{/each}}
+
+      </div>
+    </div>
+  </center>
+</div>
+
+<!-- The following input is the original-->
+
+
 <ul>
     <p>hello</p>
     {{#each beers}} // beer table

@@ -2,11 +2,15 @@
 const express = require('express');
 const beer = require('../models/beers.js');
 const router = express.Router();
+<<<<<<< HEAD
  
 
 var path = require("path");
 
 
+=======
+const beer = require('../models/beer.js');
+>>>>>>> f8aa74828711978ad34553c99bc5f3ad1f5a1d4c
 
 // Index Redirect
 router.get('/', function (req, res) {

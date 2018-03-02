@@ -13,6 +13,14 @@ console.log("ORM Connection at ORM.js");
 // });
 
 
+<<<<<<< HEAD
+=======
+    // Run MySQL Query
+    connection.query('SELECT * FROM beerlog', function (err, result) {
+      if (err) throw err;
+      callback(result);
+    });
+>>>>>>> f8aa74828711978ad34553c99bc5f3ad1f5a1d4c
 
 function printQuestionMarks(num) {
   var arr = [];
@@ -56,7 +64,25 @@ var orm = {
       if (err) {
         throw err;
       }
+<<<<<<< HEAD
       cb(result);
+=======
+    timestamp += second;
+    // ----------------------------------------------------------
+
+    // Run MySQL Query
+    connection.query('INSERT INTO beerlog SET ?', {
+      beer_Name: beer_Name,
+      brand_Name: brand_Name,
+      state_Abbrev: state_Abbrev,
+      beer_Style: beer_Style,
+      abv: abv,
+      rating: rating,
+      date: timestamp
+    }, function (err, result) {
+      if (err) throw err;
+      callback(result);
+>>>>>>> f8aa74828711978ad34553c99bc5f3ad1f5a1d4c
     });
   },
 
@@ -64,12 +90,20 @@ var orm = {
   insertOne: function (table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
+<<<<<<< HEAD
     queryString += " (";
     queryString += cols.toString();
     queryString += ") ";
     queryString += "VALUES (";
     queryString += printQuestionMarks(vals.length);
     queryString += ") ";
+=======
+    // Run MySQL Query  (think devoured = requesting a suggestion)
+    connection.query('UPDATE beerlog SET ? WHERE ?', [{suggestion: true}, {id: beerID}], function (err, result) {
+        if (err) throw err;
+        callback(result);
+      });
+>>>>>>> f8aa74828711978ad34553c99bc5f3ad1f5a1d4c
 
     console.log(queryString);
 
