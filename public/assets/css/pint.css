@@ -79,7 +79,7 @@ a {
 a:hover{
 	background:rgba(0,0,0,0.9);
 	}
-
+/*
 .right  {
 	float:right;
 	}
@@ -104,7 +104,8 @@ div .beerArt  {
 	color:#777765;
 	margin:5% 0%;
 	}
-
+	*/
+/*
 .table {
 	margin:auto;
 	width:70%;
@@ -121,29 +122,32 @@ div .beerArt  {
 	text-align: left;
 	padding:0px;
 	text-align: center;	}
-
+/*
 td	{
 	border-bottom:1px solid grey;	
 	padding:15px 0px 15px 0px;
 	}
+
+*/
+/*
 .topmenu {
 	width:800%;
 	height:40px;
 	
-	}
+	}*/
 
 	/*.nav-social  {
 	
 		float:right;
 		
 		}*/
-	#beerArt {
+/*	#beerArt {
 		align-content: center;
 		align-items: center;
 	}
 	.social {
 		width:30px;
-		}
+		}*/
 	/* .hero     {
 		color: #777765;
 		 font-size: 12px;
@@ -154,112 +158,63 @@ td	{
 		width:100%;
 		padding:100px;
 		} */
-	
+
 	
 
-	.right  {
-		float:right;
-		}
-	.left  {
-		float:left;
-		text-decoration: none;
-		}
-	div .beerArt  {
-		display:block;
-		width:700px;
-		margin:auto;
-		align-items: center;
-		}
-	
-	.anchor	{
-		font-size:20px;
-		display:block;
-		width:100%;
-		text-align:center;
-		text-decoration:none;
-		text-transform:uppercase;
-		color:#777765;
-		margin:5% 0%;
-		}
-	
-	.table {
-		margin:auto;
-		width:70%;
-		font-size:16px;
-		text-align: left;
-		padding:0px;
-		}
-	#form {
-		margin:auto;
-		/*width:70%;*/
-		font-size:16px;
-		text-align: left;
-		padding:0px;
-		text-align: center;	}
-	
-	td	{
-		border-bottom:1px solid grey;	
-		padding:15px 0px 15px 0px;
-		}
-	.topmenu {
-		width:800%;
-		height:40px;
-	
-		}
-		body {
-			margin: 0;
-			background: #000; 
-		}
-		video { 
-			position: fixed;
-			top: 50%;
-			left: 50%;
-			min-width: 100%;
-			min-height: 100%;
-			width: auto;
-			height: auto;
-			z-index: -100;
-			transform: translateX(-50%) translateY(-50%);
-			transition: 1s opacity;
-		}
-		.stopfade {
-			opacity: .5;
-		}
+body {
+	margin: 0;
+	background: #000; 
+	}
+video { 
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	transform: translateX(-50%) translateY(-50%);
+	transition: 1s opacity;
+	}
+.stopfade {
+	opacity: .5;
+	}
 		
-		#polina { 
-			font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
-			font-weight:100; 
-			background: rgba(0,0,0,0.3);
-			color: white;
-			padding: 2rem;
-			width: 38%;
-			margin:auto;
-			margin-top: 90px;
-			float: center;
-			font-size: 1.3rem;
-		}
+#polina { 
+	font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+	font-weight:100; 
+	background: rgba(0,0,0,0.3);
+	color: white;
+	padding: 2rem;
+	width: 38%;
+	margin:auto;
+	margin-top: 90px;
+	float: center;
+	font-size: 1.3rem;
+	}
 	
-		#polina button { 
-		  display: block;
-		  width: 80%;
-		  padding: .4rem;
-		  border: none; 
-		  margin: 1rem auto; 
-		  font-size: 1.3rem;
-		  background: rgba(255,255,255,0.23);
-		  color: #fff;
-		  border-radius: 3px; 
-		  cursor: pointer;
-		  transition: .3s background;
-		}
-		#polina button:hover { 
-		   background: rgba(0,0,0,0.5);
-		}
+#polina button { 
+	display: block;
+	width: 80%;
+	padding: .4rem;
+	border: none; 
+	margin: 1rem auto; 
+	font-size: 1.3rem;
+	background: rgba(255,255,255,0.23);
+	color: #fff;
+	border-radius: 3px; 
+	cursor: pointer;
+	transition: .3s background;
+	}
+#polina button:hover { 
+	background: rgba(0,0,0,0.5);
+	}
 
-		@media screen and (max-width: 500px) { 
-		  div{width:70%;} 
-		}
-		@media screen and (max-device-width: 800px) {
-		  background: #000;
-		  #bgvid { display: none; }
-		}
+@media screen and (max-width: 500px) { 
+	div{width:70%;} 
+	}
+@media screen and (max-device-width: 800px) {
+	background: #000;
+	#bgvid { display: none; }
+	}
