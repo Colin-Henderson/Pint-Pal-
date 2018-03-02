@@ -3,8 +3,6 @@ CREATE DATABASE pintpal_db;
 
 USE pintpal_db;
 
-
--- taking input from orms.js
 CREATE TABLE beerlog
 (
 	id int NOT NULL AUTO_INCREMENT,

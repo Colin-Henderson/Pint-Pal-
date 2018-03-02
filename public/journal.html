@@ -7,7 +7,6 @@
       <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
       <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
       <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
@@ -18,25 +17,24 @@
 
 </head>
   <body>
-      <div class="row col-md-8">
-          <div>
-            <nav id="nav-main" class="nav-main header__menu data-nav-main">
-              <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="journal.html">Journal</a></li>
-                <li class="nav-item"><a class="nav-link" href="suggest.html">Try something new</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://www.uber.com/">Uber</a></li>
-              </ul>
-            </nav>
-          </div>
+    <div class="wrapper">
+      <div class="row col-md-12">
+        <div>
+          <nav id="nav-main" class="nav-main header__menu data-nav-main">
+            <ul class="nav">
+              <li class="nav-item"><a class="nav-link" href="journal.html">Journal</a></li>
+              <li class="nav-item"><a class="nav-link" href="suggest.html">Try something new</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://www.uber.com/">Uber</a></li>
+            </ul>
+          </nav>
         </div>
-    <div id="polina">
-
+      </div>
       <div class="row">
         <div>
           <h1>Pint Pal</h1>
         </div>        
         <div class="hero">
-          <!--<img class="beerArt" src="assets/images/tap.jpg" /> -->
+          <img class="beerArt" src="assets/images/tap.jpg" />
           <h3 class="text-center">Beer Journal</h3>
         </div>
       </div>
@@ -48,16 +46,16 @@
           <form class="col-md-10 bg-dark" id="form">
             
             <div class="form-group">
-              <label for="beer_Name">Beer Name</label>
-              <input type="text" class="form-control" id="beer_Name" placeholder="Beer Name">
+              <label for="beerName">Beer Name</label>
+              <input type="text" class="form-control" id="beerName" placeholder="Beer Name">
             </div>
             <div class="form-group">
-              <label for="brewery_Name">Brewery Name</label>
-              <input type="text" class="form-control" id="brewery_Name" placeholder="Brewery Name">
+              <label for="breweryName">Brewery Name</label>
+              <input type="text" class="form-control" id="breweryName" placeholder="Brewery Name">
             </div>
             <div class="form-group">
-              <label for="beer_Style">Beer Style</label>
-              <input type="text" class="form-control" id="beer_Style" placeholder="Beer Style">
+              <label for="beerStyle">Beer Style</label>
+              <input type="text" class="form-control" id="beerStyle" placeholder="Beer Style">
             </div>
             <div class="form-group">
               <label for="abv">ABV</label>
@@ -65,7 +63,7 @@
             </div>
             <div class="form-group">
               <label for="location">State</label>
-              <input type="text" class="form-control" id="state_Abbrev" placeholder="State">
+              <input type="text" class="form-control" id="location" placeholder="State">
             </div>
             
             
@@ -97,74 +95,6 @@
 
 
     -->
-<<<<<<< HEAD
     <script src="assets/js/pints.js"></script>
-=======
-    <script>
-
-
-
-        $("#submit-button").click(function(event) {
-                event.preventDefault();
-
-                var journalEntry = {
-                    beerName: $("#beerName").val(),
-                    breweryName: $("#breweryName").val(),
-                    beerStyle: $("#beerStyle").val(),
-                    abv: $("#abv").val(),
-                    location: $("#location").val(),
-                    score: $("#score").val(),
-                    notes: $("#notes").val()
-                };
-                    
-                console.log(journalEntry);
-
-                $.post("journal.js", journalEntry, function(data) {
-
-
-                    //Use this for suggesting beer
-                    // $("#match-beer").text(data[1].beerName);
-                    // $("#match-brewery").text(data[1].breweryName);
-                    // $("#match-syle").text(data[1].beerStyle);
-                    // $("#match-abv").text(dta[1].abv);
-                    // $("#match-location").text(data[1].location);
-                    // $("#match-notes").text(data[1].notes);
-                    // no score here. We wouldn't suggest a beer with a bad score
-                    // // Show the modal with the best match
-                    // $("#results-modal").modal("toggle");
-                    // console.log(data[1].name + " data[1]")
-
-                    $("#beerName").val("");  // text input
-                    $("#breweryName").val("");  // text input
-                    $("#beerStyle").val("");  // text input
-                    $("#abv").val(""); // int input
-                    $("#location").val(""); // text input
-                    $("#score").val(""); // dropdown int input
-                    $("#notes").val(""); // text box for large text input
-
-
-                   
-                });
-            });
-
-        
-
-    </script>
-
-      <!-- Adds background video -->
-  <video poster="gt_VideoTrim.mp4" id="bgvid" playsinline autoplay muted>
-  <source src="assets/images/trim_Journal.mp4" type="video/webm">
-    
-<script>
-  var vid = document.getElementById('bgvid');
-  function getPlaySpeed() {
-    alert(vid.playbackRate);
-  }
-  function setPlaySpeed() {
-    vid.playbackRate = 5.5;
-
-  }
-</script>
->>>>>>> f8aa74828711978ad34553c99bc5f3ad1f5a1d4c
 
 </html>

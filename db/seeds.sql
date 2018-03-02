@@ -1,4 +1,4 @@
-INSERT INTO beerlog (brand_Name, beer_Name, state_Abbrev, beer_Style, abv, rating) 
+INSERT INTO beerlog (brand_name, beer_name, state_abbrev, beer_style, abv, rating) 
 VALUES ('Hardywood', 'Gingerbread Stout', 'VA', 'Imperial Milk', 9.2, 4.5),
     ('Guinness', 'Guinness Draught', 'Ireland', 'Irish Dry Stout', 4.2, 5.0),
     ('Breckenridge', '72 Imperial Chocolate Cream','CO', 'Milk/Sweet', 7.2, 4.5),

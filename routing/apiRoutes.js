@@ -17,32 +17,6 @@ function apiRoutes(app) {
 console.log(req.body)
 console.log("hello")
         const suggestedBeer = {         // Parse beer entry to get integers for AJAX post converts numbers into strings
-
-            // ================== From Jared's HTML =================  //
-            $.post("/api/journal.js", journalEntry, function (data) {
-
-
-                    //Use this for suggesting beer
-                    // $("#match-name").text(data[1].name);
-                    // $("#match-img").attr("src", data[1].photo);
-                    // // Show the modal with the best match
-                    // $("#results-modal").modal("toggle");
-                    // console.log(data[1].name + " data[1]")
-
-
-                    $("#beerName").val(""),  // text input
-                        $("#breweryName").val(""),  // text input
-                        $("#beerStyle").val("");  // text input
-                    $("#abv").val(""); // int input
-                    $("#location").val(""); // text input
-                    $("#score").val(""); // dropdown int input
-                    $("#notes").val(""); // text box for large text input
-
-                });
-
-
-            
-            // ================  End of Jared's HTML ============== //
             name: req.body.name,
             photo: req.body.photo,
             scores: []

@@ -2,15 +2,11 @@
 const express = require('express');
 const beer = require('../models/beers.js');
 const router = express.Router();
-<<<<<<< HEAD
  
 
 var path = require("path");
 
 
-=======
-const beer = require('../models/beer.js');
->>>>>>> f8aa74828711978ad34553c99bc5f3ad1f5a1d4c
 
 // Index Redirect
 router.get('/', function (req, res) {
@@ -42,7 +38,8 @@ router.post('/api/beers', function (req, res) {
     "beerName", "breweryName", "beerStyle", "abv", "location", "score", "notes" ], [
       req.body.beerName, req.body.breweryName, req.body.beerStyle, req.body.abv, req.body.location, req.body.score, req.body.notes
     ], function(result) {
-    res.json('/index');
+      var index = path.resolve(__dirname, '../public/home.html');
+    res.send(index);
     
   });
 });
