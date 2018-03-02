@@ -36,7 +36,7 @@ const router = require('./controller/beers_controller.js');
 
 app.use("/", router); 
 //app.use(router);
-
+console.log(router)
 app.listen(port, function() {
     console.log("App listening on PORT " + port + "Server.js");  // status 200 check
 });

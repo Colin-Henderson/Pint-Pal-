@@ -6,9 +6,9 @@ $("#submit-button").click(function (event) {
     event.preventDefault();
 
     var journalEntry = {
-        beerName: $("#beerName").val(),
-        breweryName: $("#breweryName").val(),
-        beerStyle: $("#beerStyle").val(),
+        beerName: $("#beer_Name").val(),
+        breweryName: $("#brewery_Name").val(),
+        beerStyle: $("#beer_Style").val(),
         abv: $("#abv").val(),
         location: $("#location").val(),
         score: $("#score").val(),
@@ -40,9 +40,9 @@ $("#submit-button").click(function (event) {
     }).done(function(){
         console.log("Ajax")
                 console.log("created new journalEntry");
-                $("#beerName").val("");  // text input
-                $("#breweryName").val("");  // text input
-                $("#beerStyle").val("");  // text input
+                $("#beer_Name").val("");  // text input
+                $("#brewery_Name").val("");  // text input
+                $("#beer_Style").val("");  // text input
                 $("#abv").val(""); // int input
                 $("#location").val(""); // text input
                 $("#score").val(""); // dropdown int input
