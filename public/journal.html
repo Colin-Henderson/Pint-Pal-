@@ -64,7 +64,7 @@
             </div>
             <div class="form-group">
               <label for="location">State</label>
-              <input type="text" class="form-control" id="location" placeholder="State">
+              <input type="text" class="form-control" id="state_Abbrev" placeholder="State">
             </div>
             
             
@@ -90,12 +90,76 @@
       </div>
     </div>
     </body>
+  <!-- <script src="https://code.jquery.com/jquery.js"></script>
 
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+    -->
+    <script>
+
+
+
+        $("#submit-button").click(function(event) {
+                event.preventDefault();
+
+                var journalEntry = {
+                    beerName: $("#beerName").val(),
+                    breweryName: $("#breweryName").val(),
+                    beerStyle: $("#beerStyle").val(),
+                    abv: $("#abv").val(),
+                    location: $("#location").val(),
+                    score: $("#score").val(),
+                    notes: $("#notes").val()
+                };
+                    
+                console.log(journalEntry);
+
+                $.post("journal.js", journalEntry, function(data) {
+
+
+                    //Use this for suggesting beer
+                    // $("#match-beer").text(data[1].beerName);
+                    // $("#match-brewery").text(data[1].breweryName);
+                    // $("#match-syle").text(data[1].beerStyle);
+                    // $("#match-abv").text(dta[1].abv);
+                    // $("#match-location").text(data[1].location);
+                    // $("#match-notes").text(data[1].notes);
+                    // no score here. We wouldn't suggest a beer with a bad score
+                    // // Show the modal with the best match
+                    // $("#results-modal").modal("toggle");
+                    // console.log(data[1].name + " data[1]")
+
+                    $("#beerName").val("");  // text input
+                    $("#breweryName").val("");  // text input
+                    $("#beerStyle").val("");  // text input
+                    $("#abv").val(""); // int input
+                    $("#location").val(""); // text input
+                    $("#score").val(""); // dropdown int input
+                    $("#notes").val(""); // text box for large text input
+
+
+                   
+                });
+            });
+
+        
+
+    </script>
 
       <!-- Adds background video -->
   <video poster="gt_VideoTrim.mp4" id="bgvid" playsinline autoplay muted>
   <source src="assets/images/trim_Journal.mp4" type="video/webm">
     
-<script src="assets/js/pints.js"></script>
+<script>
+  var vid = document.getElementById('bgvid');
+  function getPlaySpeed() {
+    alert(vid.playbackRate);
+  }
+  function setPlaySpeed() {
+    vid.playbackRate = 5.5;
+
+  }
+</script>
 
 </html>
