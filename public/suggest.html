@@ -12,32 +12,32 @@
     <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Ultra" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/pint.css">
 
 </head>
-
+<center><h1>Pint Pal</h1></center>
 <body>
-    <div class="wrapper">
-        <div class="row col-md-12">
-            <div>
-                <nav id="nav-main" class="nav-main header__menu data-nav-main">
-                    <ul class="nav">
-                        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="journal.html">Journal</a></li>
-                        <li class="nav-item"><a class="nav-link" href="brewery.html">Brewery</a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://www.uber.com/">Uber</a></li>
-                    </ul>
-                </nav>
-            </div>
+    <div id="polina">
+    <div class="row col-md-10">
+        <div>
+          <nav id="nav-main" class="nav-main header__menu data-nav-main">
+            <ul class="nav">
+              <li class="nav-item"><a class="nav-link" href="https://www.uber.com/">Uber</a></li>
+              <li class="nav-item"><a class="nav-link" href="brewery.html">Brewery</a></li>
+              <li class="nav-item"><a class="nav-link" href="suggest.html">Try something new</a></li>              
+              <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+              
+            </ul>
+          </nav>
         </div>
-        <div class="row">
-            <div>
-                <h1>Pint Pal</h1>
-            </div>
+      </div>
+      <div class="row">
             <div class="hero">
-                <img class="beerArt" src="assets/images/tap.jpg" />
+                
                 <h3 class="text-center">Suggestion</h3>
             </div>
+            <center><img src="assets/images/beertap.png" width="470" height= "300"/></center>
             <div class="col-md-12 row" id="suggestion">
                 <ul>
                     {{#each beers}} // beer table
@@ -55,8 +55,11 @@
             </div>
         </div>
         <div class="card text-white bg-secondary mb-3" style="max-width: 100%;">
-
         </div>
+        
 </body>
+      <!-- Adds background video -->
+      <video poster="leaves.mp4" id="bgvid" playsinline autoplay muted loop>
+            <source src="assets/images/leaves.mp4" type="video/webm">
 
 </html>
