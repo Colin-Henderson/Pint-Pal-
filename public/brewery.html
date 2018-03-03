@@ -2,45 +2,109 @@
 <html lang="en">
 
 <head>
-    <link rel="icon" type="image/png" href="babtab.jpg" />
+    <!-- <link rel="icon" type="image/png" href="babtab.jpg" /> -->
     <title>Pint Pal</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
         crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- importing app.js-->
+    <script type="text/javascript" src="/assets/js/app.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Ultra" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/pint.css">
 
 </head>
-    <center><h1>Pint Pal</h1></center>
-<body>
-    <div id="polina">
+</body>
+    <div class="polina">
         <div class="row col-md-10">
             <div>
                 <nav id="nav-main" class="nav-main header__menu data-nav-main">
                     <ul class="nav">
                         <li class="nav-item"><a class="nav-link" href="https://www.uber.com/">Uber</a></li>
-                        <li class="nav-item"><a class="nav-link" href="suggest.html">Try something new</a></li>
                         <li class="nav-item"><a class="nav-link" href="brewery.html">Brewery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="suggest.html">Try something new</a></li>              
                         <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
-        <div class="row">
- 
-            <div class="hero">
+    </div>
+  <div class="container">
+    <div class="jumbotron" style='background-image: url("assets/images/beerfoam.jpg")';>
+      <h1 class="text-center"><strong>
+              <span style='color: royalblue; font-family: futura'>B</span>
+              <span style='color: crimson; font-family: futura'>r</span>
+              <span style='color: yellow; font-family: futura'>e</span>
+              <span style='color: royalblue; font-family: futura'>w</span>
+              <span style='color: green; font-family: futura'>g</span>
+              <span style='color: crimson; font-family: futura'>l</span>
+              <span style='color: yellow; font-family: futura'>e</span>
+      </strong></h1>
+    </div>
 
-                <h3 class="text-center">Breweries</h3>
+    <!-- Row for Searching New York Times -->
+    <div class="row">
+      <div class="col-sm-12">
+        <br>
+        <!-- First panel is for handling the search parameters -->
+        <div class="panel panel-primary">
+          <div class="panel-body">
+
+            <!-- Here we create an HTML Form for handling the inputs-->
+            <form role="form">
+
+              <!-- Here we create the text box for capturing the search term-->
+              <div class="form-group">
+                <label for="search">Search Beer</label>
+                <input type="text" class="form-control" id="userInput">
+              </div>
+
+              <!-- Here we capture the number of records that the user wants to retrieve  -->
+              <!-- <div class="form-group">
+                <label for="pwd">Number of Records to Retrieve:</label>
+                <select class="form-control" id="num-records-select">
+                            <option value="1">1</option>
+                            Setting the option for 5 as default -->
+                            <!-- <option value="5" selected>5</option>
+                            <option value="10">10</option>
+                        </select>  -->
+              <!-- </div> -->
+           <div style="margin: 0 auto; width: 656px; text-align: center;">
+              <button type="submit" class="btn btn-default" id="searchBeer"></i>Search</button>
+              <button type="submit" class="btn btn-default" id="searchRandom"></i>Random Brew of The Day</button>
             </div>
-            
-        </div>      
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- This row will handle all of the retrieved articles -->
+    <div class="row">
+      <div class="col-sm-12">
+        <br>
+
+        <!-- This panel will initially be made up of a panel and wells for each of the articles retrieved -->
+        <div class="panel panel-primary">
+          <!-- This main panel will hold each of the resulting articles -->
+          <div  id="randomDescrip">
+            <div  id="searchDescrip"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- jQuery JS -->
+  <script src="https://code.jquery.com/jquery.js"></script>
 </body>
 
-<!--<center><img src="assets/images/woodtable.png" width="800" height="500"/></center> -->
+</html>
+</body>
       <!-- Adds background video -->
       <video poster="bar_Counter.mp4" id="bgvid" playsinline autoplay muted loop>
             <source src="assets/images/bar_Counter.mp4" type="video/webm">
