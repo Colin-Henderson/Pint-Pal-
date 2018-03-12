@@ -1,5 +1,3 @@
-/*     Pint Pal | University of Richmond | John Kim     */
-
 require('dotenv').config();
 var express = require("express");
 var fetch = require("node-fetch");
